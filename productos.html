@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link  rel="stylesheet" type="text/css" href="index.css">
+  <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,700' />
+  <title>ProjectCompany</title>
+
+</head>
+
+ 
+ <body class="body1">
+  <nav class="Navegador1">
+
+      <div class="logo1">
+        <img class="logo1"src="img/logo.png">
+        <p class="p1"></p>
+      </div>
+
+      <a href="index.html"><div class="let1">
+        <div class="icono1"><img class="icono1" src="img/home.png"></div>
+        <div class="T1">INICIO</div> 
+      </div></a>
+    
+      
+        <a href="quienessomos.html"><div class=" let1">
+        <div class="icono1"><img class="icono1" src="img/i.png"></div>
+     <div class="T1">Quienes somos</div> 
+    </div></a>
+
+      
+        <a href="instalaciones.html"><div class=" let1">
+        <div class="icono1"><img class="icono1" src="img/instalaciones.png"></div>
+     <div class="T1">Instalaciones</div> 
+    </div></a>
+    
+     <a href="servicios.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/servicios.png"></div>
+     <div class="T1">Servicios</div> 
+   </div></a>
+     
+      <a href="productos.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/productos.png"></div>
+     <div class="T1">Productos</div> 
+   </div></a>
+     
+      <a href="contacto.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/contacto.png"></div>
+     <div class="T1">Contacto</div> 
+   </div></a>
+   
+  </nav>
+  <div class="centro1">
+    <header>
+       <div class="titulo1">
+        <div class="t1">Productos</div> 
+      </div>
+    </header>
+    <main class="texto1">
+       
+       
+       
+       <body onload="primer()">
+
+	<img id="cambio2" src="img/cartuchos.jpg">
+       <script>
+       
+          function primer()
+{
+	document.getElementById("cambio2").src="img/cartuchos.jpg";
+	setInterval(function(){segundo();},3000);
+	
+}
+function segundo()
+{
+	document.getElementById("cambio2").src="img/impresoras.jpg";
+	setInterval(function(){tercero();},3000);
+	
+}
+function tercero()
+{
+	document.getElementById("cambio2").src="img/impresora3d.jpg";
+	setInterval(function(){primer();},3000);
+	
+}
+   var miVentana;       
+function abrir(){
+   miVentana=window.open('https://twitter.com', 'ventana1', 
+                         'height=500, width=700, left=300, location=yes,menubar=no, resilazable=no,scrollbar=yes, status=no, titlebar=yes, top=500');
+}
+var miventana2;          
+function abrir2(){
+   miVentana2=window.open('https://www.facebook.com', 'ventana2', 
+                         'height=500, width=700, left=300, location=yes,menubar=no, resilazable=no,scrollbar=yes, status=no, titlebar=yes, top=500');
+}
+          
+       
+       </script>
+       <br>
+          <br>
+<br>
+        <form name="tinta" method="post" 
+               action="mailto:raul.rodriguez@universidadeuropea.es" 
+               onsubmit="return validarForm()">
+            
+         <fieldset>
+            <legend> Pedidos Tinta impresora </legend>
+            Nombre de usuario: <input type="text" name="nombre" required>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            Correo electrónico: <input type="email" name="email" required>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            Tipos de Tintas: 
+            <input type="checkbox" name="hp">
+            HP 304
+            <select name="cap1">
+               <option> 0 </option>
+               <option> 5 </option>
+               <option> 10 </option>
+               <option> 15 </option>
+               <option> 20 </option>
+            </select>
+            
+            <input type="checkbox" name="ericson">
+            ERICSON 404
+            <select name="cap2">
+               <option> 0 </option>
+               <option> 5 </option>
+               <option> 10 </option>
+               <option> 15 </option>
+               <option> 20 </option>
+            </select>
+            
+            <input type="checkbox" name="apple">
+            APPLE 1234
+            <select name="cap3">
+               <option> 0 </option>
+               <option> 5 </option>
+               <option> 10 </option>
+               <option> 15 </option>
+               <option> 20 </option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <br><br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+            
+            
+            
+            </fieldset>
+      </form>
+
+    <script>
+       
+       function validarForm() {
+   if(document.tinta.hp.checked == false && 
+     document.tinta.ericson.checked == false && 
+      document.tinta.apple.checked == false) {
+         alert("Por favor, seleccione alguno de los cartuchos de tinta disponibles");
+         return false;
+      
+   }
+   
+   if(document.tinta.cap1.value == 0 && 
+     document.tinta.cap2.value == 0 && 
+      document.tinta.cap3.value == 0) {
+         alert("Por favor, tiene que indicar que cantidad de cartuchos de tinta quiere comprar");
+         return false;
+   }
+   
+   var n_cap1=parseInt(document.tinta.cap1.value);
+   var n_cap2=parseInt(document.tinta.cap2.value);
+   var n_cap3=parseInt(document.tinta.cap3.value);
+   
+   var sum=n_cap1+n_cap2+n_cap3;
+   
+   if (sum<5) {
+      alert("El pedido minimo que tiene que realizar es de 5 cartuchos");
+      return false;
+   }
+   
+   if(document.tinta.hp.checked == false && 
+     document.tinta.cap1.value != 0) {
+         alert("Los datos seleccionados no son correctos");
+         return false;
+   }
+
+   if(document.tinta.ericson.checked == false && 
+     document.tinta.cap2.value != 0) {
+         alert("Los datos seleccionados no son correctos");
+         return false;
+   }
+   
+   if(document.tinta.apple.checked == false && 
+     document.tinta.cap3.value != 0) {
+         alert("Los datos seleccionados no son correctos");
+         return false;
+   }
+   alert("Felicidades" + document.tinta.nombre.value
+         +"con" + document.tinta.email.value + " tendrá su pedido de tinta para impresora en menos de 48 horas.");
+   
+   
+   
+}
+
+       
+       
+       </script>
+       
+       
+       <article>
+     
+       
+       
+    </article>
+    </main>
+    <footer>
+      <img class="TWITTER1" src="img/twitter.png" onclick="abrir()">
+      <img class="FACEBOOK1" src="img/facebook.png" onclick="abrir2()">
+    </footer>
+  </div>
+</body>
+
+</html>

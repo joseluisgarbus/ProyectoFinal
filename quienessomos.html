@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link  rel="stylesheet" type="text/css" href="index.css">
+  <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,700' />
+  <title>ProjectCompany</title>
+
+</head>
+
+ 
+ <body class="body1">
+   
+    
+    
+  <nav class="Navegador1">
+
+      <div class="logo1">
+        <img class="logo1"src="img/logo.png">
+        <p class="p1"></p>
+      </div>
+
+      <a href="index.html"><div class="let1">
+        <div class="icono1"><img class="icono1" src="img/home.png"></div>
+        <div class="T1">INICIO</div> 
+      </div></a>
+    
+      
+        <a href="quienessomos.html"><div class=" let1">
+        <div class="icono1"><img class="icono1" src="img/i.png"></div>
+     <div class="T1">Quienes somos</div> 
+    </div></a>
+
+      
+        <a href="instalaciones.html"><div class=" let1">
+        <div class="icono1"><img class="icono1" src="img/instalaciones.png"></div>
+     <div class="T1">Instalaciones</div> 
+    </div></a>
+    
+     <a href="servicios.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/servicios.png"></div>
+     <div class="T1">Servicios</div> 
+   </div></a>
+     
+      <a href="productos.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/productos.png"></div>
+     <div class="T1">Productos</div> 
+   </div></a>
+     
+      <a href="contacto.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/contacto.png"></div>
+     <div class="T1">Contacto</div> 
+   </div></a>
+   
+  </nav>
+  <div class="centro1">
+    <header>
+       <div class="titulo1">
+        <div class="t1">¿Quiénes somos?</div> 
+      </div>
+    </header>
+     
+     
+     
+    
+      <body onload="primer()">
+
+	<img id="cambio3" src="img/fotoqs.jpg">
+       <script>
+          
+
+                  var miVentana;       
+function abrir(){
+   miVentana=window.open('https://twitter.com', 'ventana1', 
+                         'height=500, width=700, left=300, location=yes,menubar=no, resilazable=no,scrollbar=yes, status=no, titlebar=yes, top=500');
+}
+var miventana2;          
+function abrir2(){
+   miVentana2=window.open('https://www.facebook.com', 'ventana2', 
+                         'height=500, width=700, left=300, location=yes,menubar=no, resilazable=no,scrollbar=yes, status=no, titlebar=yes, top=500');
+}
+       
+          function primer()
+{
+	document.getElementById("cambio3").src="img/fotoqs.jpg";
+	setInterval(function(){segundo();},4000);
+	
+}
+function segundo()
+{
+	document.getElementById("cambio3").src="img/fotoqs1.jpg";
+	setInterval(function(){tercero();},4000);
+	
+}
+function tercero()
+{
+	document.getElementById("cambio3").src="img/fotoqs2.jpg";
+	setInterval(function(){cuarto();},4000);
+	
+}
+          
+  function cuarto()
+{
+	document.getElementById("cambio3").src="img/fotoqs3.jpg";
+	setInterval(function(){primer();},4000);
+	
+}
+         </script>
+    <main class="texto1">
+       
+    <article>
+       <b>ProjectCompany</b> <p align="center">Es una empresa recién salida del horno de la Universidad Europea de Madrid. 
+       Somos una empresa nacida en las aulas de la universidad, por lo que los integrantes de ProjectCompany 
+       somos alumnos dispuestos a aprender y a realizar proyectos en grupo con el fin de adquirir nuevos conocimeintos e ir 
+       tomando contacto con este mundo. </p>
+       
+       <br> 
+       <p align="center">Actualmente la empresa se dedica principalmente al mantenimiento de páginas web, posicionamiento google, 
+       posicionamiento SEO y muchas cosas más que podrás descubrir en la sección de productos.</p>
+       
+       <br>
+       <br>
+       <br>
+       Nuestra sede actualmente está situada en Villaviciosa de Odón, pero, si quieres saber más sobre nuestras instalaciones... solo tienes que 
+       dirigirte hacia ellas!!!! <b>¡¡TE ESPERAMOS!!</b>
+    </article>
+    </main>
+    <footer>
+      <img class="TWITTER1" src="img/twitter.png" onclick="abrir()">
+      <img class="FACEBOOK1" src="img/facebook.png" onclick="abrir2()">
+     </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link  rel="stylesheet" type="text/css" href="index.css">
+  <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,700' />
+  <title>ProjectCompany</title>
+
+</head>
+
+ 
+ <body class="body1">
+  <nav class="Navegador1">
+
+      <div class="logo1">
+        <img class="logo1"src="img/logo.png">
+        <p class="p1"></p>
+      </div>
+
+      <a href="index.html"><div class="let1">
+        <div class="icono1"><img class="icono1" src="img/home.png"></div>
+        <div class="T1">INICIO</div> 
+      </div></a>
+    
+      
+        <a href="quienessomos.html"><div class=" let1">
+        <div class="icono1"><img class="icono1" src="img/i.png"></div>
+     <div class="T1">Quienes somos</div> 
+    </div></a>
+
+      
+        <a href="instalaciones.html"><div class=" let1">
+        <div class="icono1"><img class="icono1" src="img/instalaciones.png"></div>
+     <div class="T1">Instalaciones</div> 
+    </div></a>
+    
+     <a href="servicios.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/servicios.png"></div>
+     <div class="T1">Servicios</div> 
+   </div></a>
+     
+      <a href="productos.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/productos.png"></div>
+     <div class="T1">Productos</div> 
+   </div></a>
+     
+      <a href="contacto.html"><div class=" let1">
+       <div class="icono1"><img class="icono1" src="img/contacto.png"></div>
+     <div class="T1">Contacto</div> 
+   </div></a>
+   
+  </nav>
+  <div class="centro1">
+    <header>
+       <div class="titulo1">
+        <div class="t1">NUESTRAS INSTALACIONES</div> 
+      </div>
+    </header>
+    
+    
+     
+      
+       
+       <body onload="primer()">
+
+	<img id="cambio" src="img/uni1.jpg">
+       <script>
+       
+          function primer()
+{
+	document.getElementById("cambio").src="img/uni1.jpg";
+	setInterval(function(){segundo();},7000);
+	
+}
+function segundo()
+{
+	document.getElementById("cambio").src="img/uni2.jpg";
+	setInterval(function(){tercero();},7000);
+	
+}
+function tercero()
+{
+	document.getElementById("cambio").src="img/uni3.jpg";
+	setInterval(function(){primer();},7000);
+	
+}
+          
+                  var miVentana;       
+function abrir(){
+   miVentana=window.open('https://twitter.com', 'ventana1', 
+                         'height=500, width=700, left=300, location=yes,menubar=no, resilazable=no,scrollbar=yes, status=no, titlebar=yes, top=500');
+}
+var miventana2;          
+function abrir2(){
+   miVentana2=window.open('https://www.facebook.com', 'ventana2', 
+                         'height=500, width=700, left=300, location=yes,menubar=no, resilazable=no,scrollbar=yes, status=no, titlebar=yes, top=500');
+}
+          
+       
+       </script>
+       <main class="texto1">
+       <article>
+       
+       <b>¡¡¡Estas son nuestras instalaciones!!!</b> <p align="center"> Disponemos de 14000 m2 de todo tipo de instalaciones.
+Tanto instalaciones deportivas a la vanguardia y diseñadas para tus necesidades. Aulas con lo último en tecnología. Pistas deportivas para el ocio de los 
+          estudiantes, para que puedan disfrutar de su tiempo libre, etc. 
+          Si algo caracteriza a estas instalaciones, es la limpieza. Si tiene la oportunidad de visitarnos, se dará cuenta de lo limpio 
+          que está todo, no encontrarás plasticos ni nada por el estilo tirados y dando vueltas por el campus... ya que, NO PLANET B. </p>
+          
+          
+          <br> 
+          <br>
+          
+         <p align="center">Si desea visitarnos, disponemos de jornadas de puertas abiertas con guia personalizado a su disposición. No tenemos duda de que 
+          saldrá encantado de nuestras instalaciones!!!</p>
+    </article>
+    </main>
+    <footer>
+      <img class="TWITTER1" src="img/twitter.png" onclick="abrir()">
+      <img class="FACEBOOK1" src="img/facebook.png" onclick="abrir2()">
+    </footer>
+  </div>
+</body>
+
+</html>
